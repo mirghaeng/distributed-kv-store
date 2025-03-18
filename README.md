@@ -1,5 +1,7 @@
 # Key-value store
 
+Inspired by the [research paper](https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf) for Amazon Dynamo/DynamoDB.
+
 A replicated fault-tolerant key-value store with causal consistency, supporting key-value store operations:
 
 - GET request (for retrieving the value of key `<key>`)
