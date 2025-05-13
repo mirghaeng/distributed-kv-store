@@ -17,3 +17,11 @@ Install [rustup](https://rustup.rs/), then compile and run the program
 ```sh
 cargo run
 ```
+
+## Run Main & Forwarding Instances
+```bash
+docker build -t app .
+docker network create --subnet=10.10.0.0/16 mynet
+docker run -p 8086:8085 --net=mynet --ip=10.10.0.2 --name="main-container" app
+docker run -p 8087:8085 --net=mynet --ip=10.10.0.3 --name="forwarding-container" -e \ FORWARDING_ADDRESS=10.10.0.2:8085 app
+```
