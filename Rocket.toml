@@ -1,8 +1,4 @@
-[development]
+[default]
+address = "0.0.0.0"
 port = 8085
- 
-[staging]
-port = 8085
- 
-[production]
-port = 8085
+log = "normal"
